@@ -12,11 +12,21 @@ namespace MvxRecyclerViewLeakTest.ViewModels
 {
     public class RecyclerViewTestViewModel : BaseViewModel
     {
-        public ObservableCollection<ListItem> TestList { get; set; }
+        private List<ListItem> m_testList;
+
+        public List<ListItem> TestList
+        {
+            get { return m_testList; }
+            set
+            {
+                m_testList = value;
+                RaisePropertyChanged(() => TestList);
+            }
+        }
 
         public RecyclerViewTestViewModel()
         {
-            TestList = new ObservableCollection<ListItem>();
+            TestList = new List<ListItem>();
         }
 
         public virtual ICommand ButtonClick

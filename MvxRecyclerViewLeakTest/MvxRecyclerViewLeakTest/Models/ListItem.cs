@@ -2,7 +2,7 @@
 
 namespace MvxRecyclerViewLeakTest.Models
 {
-    public class ListItem : MvxNotifyPropertyChanged
+    public class ListItem 
     {
         public string Name { get; set; }
 
