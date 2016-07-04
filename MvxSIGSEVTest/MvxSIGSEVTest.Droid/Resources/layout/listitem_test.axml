@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+              xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+     
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+  <android.support.v7.widget.CardView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+cardview:cardUseCompatPadding="true"
+  cardview:cardCornerRadius="4dp"
+  cardview:cardElevation="4dp"
+  cardview:contentPadding="10dp">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="24dp"
+        android:gravity="center"
+        local:MvxBind="Text Name+Count" />
+  </android.support.v7.widget.CardView>
+</LinearLayout>
